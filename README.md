@@ -6,4 +6,4 @@
 
 ### Deployment
 
-This section has moved here: []()
+This section has moved here: [https://parcel-task.netlify.app/](https://parcel-task.netlify.app/)
