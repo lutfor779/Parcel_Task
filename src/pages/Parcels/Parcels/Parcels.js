@@ -47,12 +47,11 @@ const Parcels = () => {
 
                 :
 
-                // <div style={{ minHeight: '95vh', paddingBottom: "25px" }}>
                 <Alert severity="warning" sx={{ maxWidth: '250px', mx: 'auto', mt: 8 }}>
                     <AlertTitle>Oops!!!</AlertTitle>
                     Currently you have no parcel!
                 </Alert>
-        // </div>
+
     );
 };
 
