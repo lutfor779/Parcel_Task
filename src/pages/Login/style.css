@@ -1,12 +1,17 @@
 .MuiPaper-root{
      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+     color: white !important;
 }
 .MuiInput-root{
     color: white !important; 
 }
-.MuiInputLabel-root{
-    color: white !important;
-}
 .MuiAlert-filled{
     color: red !important;
+}
+.MuiInputLabel-formControl{
+    color: lightsalmon !important;
+}
+
+span{
+    color: lightsalmon !important;
 }

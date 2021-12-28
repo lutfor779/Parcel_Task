@@ -33,7 +33,7 @@ const Login = () => {
 
             <Box sx={{ minWidth: 345, maxWidth: 480, mx: 'auto' }}>
                 <Paper elevation={6} sx={{ px: 2, py: 3, mt: 8 }}>
-                    <Typography variant="h4" gutterBottom sx={{ mb: 4, color: 'warning.main' }}>Please Login</Typography>
+                    <Typography variant="h4" gutterBottom sx={{ mb: 4, color: 'secondary.main' }}>Please Login</Typography>
                     <form onSubmit={handleLoginSubmit} >
                         <TextField
                             sx={{ width: "90%", m: 1 }}

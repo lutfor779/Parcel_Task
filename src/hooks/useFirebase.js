@@ -122,6 +122,7 @@ const useFirebase = () => {
         isLoading,
         setUser,
         setError,
+        setIsLoading,
         resisterUser,
         signInWithEmailPassword,
         signInWithGoogle,
