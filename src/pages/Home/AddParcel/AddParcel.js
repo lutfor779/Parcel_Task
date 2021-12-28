@@ -26,7 +26,7 @@ const AddParcel = () => {
         const email = "email";
         data[email] = user.email;
 
-        fetch('http://localhost:5000/parcels', {
+        fetch('https://nameless-dusk-06135.herokuapp.com/parcels', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

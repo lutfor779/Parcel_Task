@@ -8,7 +8,7 @@ const Parcels = () => {
     const [parcels, setParcels] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/parcels?email=${user.email}`)
+        fetch(`https://nameless-dusk-06135.herokuapp.com/parcels?email=${user.email}`)
             .then(res => res.json())
             .then(data => {
                 setParcels(data);

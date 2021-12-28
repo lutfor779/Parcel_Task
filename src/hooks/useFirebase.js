@@ -71,7 +71,7 @@ const useFirebase = () => {
                 const destination = location?.state?.from || '/home';
                 navigate(destination);
             })
-            .catch(err => setError(err))
+            .catch(err => setError(err.message))
             .finally(setIsLoading(false));
     }
 
@@ -106,7 +106,7 @@ const useFirebase = () => {
 
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch('http://localhost:5000/users', {
+        fetch('https://nameless-dusk-06135.herokuapp.com/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'
