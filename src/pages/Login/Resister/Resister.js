@@ -33,10 +33,16 @@ const Resister = () => {
 
     return (
         <Container>
-            <Box sx={{ minWidth: 320, maxWidth: 480, mx: 'auto' }}>
+            <Box sx={{ minWidth: 300, maxWidth: 480, mx: 'auto' }}>
 
                 {!isLoading && <Paper elevation={6} sx={{ px: 2, py: 3, mt: 8 }}>
-                    <Typography variant="h4" gutterBottom sx={{ mb: 4, color: 'warning.main' }}>Please Resister</Typography>
+
+                    <Typography
+                        variant="h4"
+                        gutterBottom
+                        sx={{ mb: 4, color: 'warning.main', fontWeight: 'bold' }}>
+                        Please Resister</Typography>
+
                     <form onSubmit={handleRegistrationSubmit} >
                         <TextField
                             sx={{ width: "90%", m: 1 }}
@@ -45,7 +51,8 @@ const Resister = () => {
                             name='name'
                             onBlur={handleOnBlur}
                             variant="standard"
-                            required />
+                            required
+                            InputLabelProps={{ required: false }} />
 
                         <TextField
                             sx={{ width: "90%", m: 1 }}
@@ -54,7 +61,8 @@ const Resister = () => {
                             name='email'
                             onBlur={handleOnBlur}
                             variant="standard"
-                            required />
+                            required
+                            InputLabelProps={{ required: false }} />
 
                         <TextField
                             label="Your Password"
@@ -63,7 +71,8 @@ const Resister = () => {
                             name='password'
                             onBlur={handleOnBlur}
                             variant="standard"
-                            required />
+                            required
+                            InputLabelProps={{ required: false }} />
 
                         <TextField
                             label="Retype Your Password"
@@ -72,7 +81,8 @@ const Resister = () => {
                             name='confirmPassword'
                             onBlur={handleOnBlur}
                             variant="standard"
-                            required />
+                            required
+                            InputLabelProps={{ required: false }} />
 
                         {error && <Alert variant="filled" severity="error">
                             {error}
@@ -90,7 +100,7 @@ const Resister = () => {
                     </form>
                     <br />
                     <Button variant="contained"
-                        color="secondary"
+                        color="warning"
                         sx={{ width: '90%', mx: 1, mt: 4 }}
                         onClick={() => signInWithGoogle(location, navigate)} >SingUp with Google</Button>
                 </Paper>

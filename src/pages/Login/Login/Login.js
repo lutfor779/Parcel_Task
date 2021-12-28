@@ -8,7 +8,7 @@ import '../style.css';
 
 const Login = () => {
     const [loginData, setLoginData] = useState({});
-    const { user, error, setError, signInWithGoogle, signInWithEmailPassword, isLoading, logOut } = useAuth();
+    const { user, error, setError, signInWithGoogle, signInWithEmailPassword, isLoading } = useAuth();
 
     const location = useLocation();
     const navigate = useNavigate();
@@ -31,9 +31,16 @@ const Login = () => {
     return (
         <Container sx={{ color: 'white' }}>
 
-            <Box sx={{ minWidth: 345, maxWidth: 480, mx: 'auto' }}>
+            <Box sx={{ minWidth: 300, maxWidth: 480, mx: 'auto' }}>
+
                 <Paper elevation={6} sx={{ px: 2, py: 3, mt: 8 }}>
-                    <Typography variant="h4" gutterBottom sx={{ mb: 4, color: 'secondary.main' }}>Please Login</Typography>
+
+                    <Typography
+                        variant="h4"
+                        gutterBottom
+                        sx={{ mb: 4, color: 'warning.main', fontWeight: 'bold' }}>
+                        Please Login</Typography>
+
                     <form onSubmit={handleLoginSubmit} >
                         <TextField
                             sx={{ width: "90%", m: 1 }}
@@ -42,7 +49,8 @@ const Login = () => {
                             name="email"
                             onBlur={handleOnBlur}
                             variant="standard"
-                            required />
+                            required
+                            InputLabelProps={{ required: false }} />
 
                         <TextField
                             label="Password"
@@ -51,7 +59,8 @@ const Login = () => {
                             name='password'
                             onBlur={handleOnBlur}
                             variant="standard"
-                            required />
+                            required
+                            InputLabelProps={{ required: false }} />
 
                         {error && <Alert variant="filled" severity="error">{error}</Alert>
                         }
@@ -66,22 +75,15 @@ const Login = () => {
                     </form>
 
                     <Button variant="contained"
-                        color="secondary"
+                        color="warning"
                         sx={{ width: '90%', mx: 1, mt: 4 }}
                         onClick={() => signInWithGoogle(location, navigate)} >Signin with google</Button>
                 </Paper>
+                <br />
 
                 {isLoading && <CircularProgress />
                 }
                 {user.email && <Alert severity="success">Login Successfully</Alert>
-                }
-                <br /><br /><br /><br />
-
-
-                {
-                    user.email && <Button variant="contained"
-                        sx={{ width: '90%', m: 1 }}
-                        onClick={() => logOut()} >Logout</Button>
                 }
             </Box>
         </Container>

@@ -3,6 +3,7 @@ import './App.css';
 import AuthProvider from './context/AuthProvider';
 import Home from './pages/Home/Home/Home';
 import Login from './pages/Login/Login/Login';
+import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
 import Resister from './pages/Login/Resister/Resister';
 import Parcels from './pages/Parcels/Parcels/Parcels';
 import Navigation from './pages/Shared/Navigation/Navigation';
@@ -14,12 +15,23 @@ function App() {
         <BrowserRouter>
           <Navigation />
           <Routes>
-            <Route path="/" element={<Login />}>
-              <Route index element={<Login />} />
+            <Route path="/" element={
+              <PrivateRoute><Home /></PrivateRoute>
+            }>
+              <Route index element={
+                <PrivateRoute><Home /></PrivateRoute>
+              } />
             </Route>
+
+            <Route path="/home" element={
+              <PrivateRoute><Home /></PrivateRoute>
+            } />
+            <Route path="/parcels" element={
+              <PrivateRoute><Parcels /></PrivateRoute>
+            } />
+
+            <Route path="/login" element={<Login />} />
             <Route path="/resister" element={<Resister />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/parcels" element={<Parcels />} />
           </Routes>
         </BrowserRouter>
       </AuthProvider>

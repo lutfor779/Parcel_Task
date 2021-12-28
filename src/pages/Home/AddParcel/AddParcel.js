@@ -52,10 +52,14 @@ const AddParcel = () => {
         isLoading ? <CircularProgress />
             :
             <Container>
-                <Box sx={{ minWidth: 345, maxWidth: 680, mx: 'auto' }}>
-                    <Paper elevation={6} sx={{ px: 2, py: 3, mt: 8 }}>
-                        <Typography variant="h4" gutterBottom sx={{ mb: 4, color: 'primary.main' }}>Add A Parcel </Typography>
+                <Box sx={{ minWidth: 300, maxWidth: 680, mx: 'auto' }}>
+
+                    <Paper elevation={6} sx={{ px: 2, py: 3, mt: 3 }}>
+
+                        <Typography variant="h4" gutterBottom sx={{ mb: 4, color: 'info.main', fontWeight: 'bold' }}>Add A Parcel </Typography>
+
                         <form onSubmit={handleSubmit} >
+
                             <TextField id="standard-basic"
                                 sx={{ width: "90%", m: 1 }}
                                 label="Parcel Info"
@@ -64,7 +68,8 @@ const AddParcel = () => {
                                 onBlur={handleOnBlur}
                                 variant="standard"
                                 color="warning"
-                                required />
+                                required
+                                InputLabelProps={{ required: false }} />
 
                             <TextField id="standard-basic"
                                 sx={{ width: "90%", m: 1 }}
@@ -74,7 +79,8 @@ const AddParcel = () => {
                                 onBlur={handleOnBlur}
                                 variant="standard"
                                 color="warning"
-                                required />
+                                required
+                                InputLabelProps={{ required: false }} />
 
                             <TextField id="standard-basic"
                                 sx={{ width: "90%", m: 1 }}
@@ -84,7 +90,8 @@ const AddParcel = () => {
                                 onBlur={handleOnBlur}
                                 variant="standard"
                                 color="warning"
-                                required />
+                                required
+                                InputLabelProps={{ required: false }} />
 
                             <TextField id="standard-basic"
                                 label="Ending Location"
@@ -94,7 +101,8 @@ const AddParcel = () => {
                                 onBlur={handleOnBlur}
                                 variant="standard"
                                 color="warning"
-                                required />
+                                required
+                                InputLabelProps={{ required: false }} />
 
                             <TextField id="standard-basic"
                                 label="Sender Name"
@@ -104,7 +112,8 @@ const AddParcel = () => {
                                 onBlur={handleOnBlur}
                                 variant="standard"
                                 color="warning"
-                                required />
+                                required
+                                InputLabelProps={{ required: false }} />
 
                             <TextField id="standard-basic"
                                 label="Sender Address"
@@ -114,7 +123,8 @@ const AddParcel = () => {
                                 onBlur={handleOnBlur}
                                 variant="standard"
                                 color="warning"
-                                required />
+                                required
+                                InputLabelProps={{ required: false }} />
 
                             <TextField id="standard-basic"
                                 label="Sender Phone No."
@@ -124,7 +134,8 @@ const AddParcel = () => {
                                 onBlur={handleOnBlur}
                                 variant="standard"
                                 color="warning"
-                                required />
+                                required
+                                InputLabelProps={{ required: false }} />
 
                             <TextField id="standard-basic"
                                 label="Receiver Name"
@@ -134,7 +145,8 @@ const AddParcel = () => {
                                 onBlur={handleOnBlur}
                                 variant="standard"
                                 color="warning"
-                                required />
+                                required
+                                InputLabelProps={{ required: false }} />
 
                             <TextField id="standard-basic"
                                 label="Receiver Address"
@@ -144,7 +156,8 @@ const AddParcel = () => {
                                 onBlur={handleOnBlur}
                                 variant="standard"
                                 color="warning"
-                                required />
+                                required
+                                InputLabelProps={{ required: false }} />
 
                             <TextField id="standard-basic"
                                 label="Receiver Phone No."
@@ -154,7 +167,8 @@ const AddParcel = () => {
                                 onBlur={handleOnBlur}
                                 variant="standard"
                                 color="warning"
-                                required />
+                                required
+                                InputLabelProps={{ required: false }} />
 
                             <Button variant="contained"
                                 sx={{ width: '90%', mx: 1, mt: 3 }}

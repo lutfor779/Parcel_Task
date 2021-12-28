@@ -34,8 +34,8 @@ const useFirebase = () => {
                     .catch((err) => setError(err.message));
 
                 // redirect url
-                // const destination = location?.state?.from || '/';
-                // navigate.replace(destination);
+                const destination = location?.state?.from || '/home';
+                navigate(destination);
             })
             .catch((err) => {
                 setError(err.message);
@@ -49,8 +49,8 @@ const useFirebase = () => {
             .then((userCredential) => {
                 setUser(userCredential.user);
                 setError('');
-                // const destination = location?.state?.from || '/';
-                // navigate.replace(destination);                
+                const destination = location?.state?.from || '/home';
+                navigate(destination);
             })
             .catch((err) => {
                 setError(err.message);
@@ -68,8 +68,8 @@ const useFirebase = () => {
                 // save user to database
                 saveUser(result.user.email, result.user.displayName, 'PUT');
 
-                // const destination = location?.state?.from || '/';
-                // navigate.replace(destination);
+                const destination = location?.state?.from || '/home';
+                navigate(destination);
             })
             .catch(err => setError(err))
             .finally(setIsLoading(false));
